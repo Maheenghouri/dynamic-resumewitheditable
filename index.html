@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume Form</title>
+    <script>
+        function saveFormData(event) {
+            event.preventDefault();
+            const resumeData = {
+                name: document.getElementById("name").value,
+                role: document.getElementById("role").value,
+                phone: document.getElementById("phone").value,
+                linkedin: document.getElementById("linkedin").value,
+                email: document.getElementById("email").value,
+                website: document.getElementById("website").value,
+                about: document.getElementById("about").value,
+                skills: document.getElementById("skills").value,
+                tools: document.getElementById("tools").value,
+                experience: document.getElementById("experience").value,
+                education: document.getElementById("education").value
+            };
+            localStorage.setItem("resumeData", JSON.stringify(resumeData));
+            window.location.href = "template.html";
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="saveFormData(event)">
+        <div class="form-container">
+            <form class="modern-form">
+              <h2 class="form-title">Resume Generator</h2>
+              
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" id="role" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="linkedin">LinkedIn</label>
+                <input type="url" id="linkedin" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="website">Website</label>
+                <input type="url" id="website">
+              </div>
+          
+              <div class="form-group">
+                <label for="about">About</label>
+                <textarea id="about" rows="3" required></textarea>
+              </div>
+          
+              <div class="form-group">
+                <label for="skills">Skills (comma-separated)</label>
+                <input type="text" id="skills" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="tools">Tools (comma-separated)</label>
+                <input type="text" id="tools" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="experience">Work Experience (semicolon-separated)</label>
+                <textarea id="experience" rows="3" required></textarea>
+              </div>
+          
+              <div class="form-group">
+                <label for="education">Education (format: Degree-Year;)</label>
+                <textarea id="education" rows="3" required></textarea>
+              </div>
+          
+              <button type="submit" class="submit-button">Submit</button>
+            </form>
+          </div>
+    </form>
+</body>
+</html>

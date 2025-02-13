@@ -1,0 +1,255 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.cv-container {
+    display: flex;
+    width: 231mm;
+    height: 242mm;
+    margin: 150px auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    page-break-after: always; 
+}
+
+ 
+.left-section {
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffcc00;
+    margin-bottom: 20px;
+}
+.contact-info{
+    word-wrap: break-word;  
+    overflow-wrap: break-word; 
+    max-width: 100%; 
+    color: white;
+    text-align: left;
+}
+
+.contact-info,
+.skills,
+.tools {
+    margin: 20px 0;
+    text-align: left;
+    
+}
+
+.contact-info h3,
+.skills h3,
+.tools h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+.contact-info a {
+    color: white;
+}
+
+.skills ul,
+.tools ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li,
+.tools li {
+    margin: 10px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.skills li::before,
+.tools li::before {
+    content: "•";
+    color: #ffcc00;
+    position: absolute;
+    left: 0;
+}
+
+
+.right-section {
+    width: 70%;
+    padding: 30px;
+    color: #333;
+    background-color: burlywood;
+}
+
+.right-section h1 {
+    font-size: 50px;
+    color: #333;
+}
+
+.subtitle {
+    color: #b3261e;
+    font-size: 24px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ffcc00;
+    margin: 10px 0;
+}
+
+.right-section h3 {
+    margin: 20px 0 10px;
+    font-size: 26px;
+}
+
+.work-experience h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.work-experience p {
+    margin-left: 10px;
+    line-height: 1.5;
+}
+
+.right-section p {
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+@media print {
+    body {
+        background: none;
+    }
+
+    .cv-container {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+    }
+}
+
+.contact-info h3{
+    color: white;
+}
+
+
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+   
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+   
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+   
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+  
+    .form-title {
+      font-size: 1.5rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      padding: 8px;
+    }
+  }
+  
